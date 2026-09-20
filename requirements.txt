@@ -1,0 +1,13 @@
+# LangChain 文档 MCP 检索服务 —— 依赖
+# 安装：pip install -r requirements.txt
+#
+# 注意：pymilvus 2.6.x 需要搭配 Milvus 服务端 2.6.x。
+# 用 3.x 的 Milvus 服务端会出现 collection 卡在 Loading 50% 的路径解析问题。
+
+mcp>=1.27.0              # 官方 MCP SDK（含 FastMCP）
+pymilvus>=2.6.0,<3.0.0   # Milvus 客户端；版本需与服务端大版本一致
+rank-bm25>=0.2.2         # BM25 关键词检索
+numpy>=2.0               # rank-bm25 依赖，且用于向量运算
+openai>=2.0              # 调用 OpenAI 兼容接口做向量化与查询改写
+requests>=2.31           # 调用 rerank 接口、下载官方文档
+python-dotenv>=1.0       # 读取 .env 配置
