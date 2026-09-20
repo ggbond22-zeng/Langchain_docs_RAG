@@ -1,0 +1,43 @@
+# ===== 敏感信息：绝对不要提交 =====
+.env
+.env.local
+*.key
+*.pem
+
+# ===== 本地缓存与数据 =====
+langchain_docs/
+pages_index.json
+volumes/
+*.log
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+venv/
+.venv/
+env/
+ENV/
+
+# ===== 测试与覆盖率 =====
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# ===== 编辑器与系统 =====
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
